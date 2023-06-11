@@ -157,7 +157,7 @@
     let start = true;
     let gridSize = 35;
     let gameOver = false;
-    let snakeSpeed = 500;
+    let snakeSpeed = 5;
     let highScore = 0;
     let score = 0;
     let expansionRate = 1;
@@ -314,7 +314,7 @@
         if (onSnake(food)) {
             expandSnake(expansionRate);
             score++;
-            snakeSpeed += .2;
+            snakeSpeed *= 1.5;
             food = newFoodPosition();
         }
     }
